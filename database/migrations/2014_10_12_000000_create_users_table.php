@@ -23,10 +23,10 @@ class CreateUsersTable extends Migration
             $table->string('provider_id')->default('0000000000000000');
             $table->string('provider_photo')->default('0000000000000000');
             $table->string('photo_url')->nullable();
-            $table->string('api_token')->nullabled();
-            $table->string('push_token')->nullabled();
-            $table->string('phone')->nullabled();
-            $table->geometry('reg_location')->nullabled();
+            $table->string('api_token')->nullable();
+            $table->string('push_token')->nullable();
+            $table->string('phone')->nullable();
+            $table->geometry('reg_location')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
