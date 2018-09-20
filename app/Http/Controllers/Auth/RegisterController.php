@@ -51,7 +51,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6',
+            'password_confirmed' => 'required|string|same:password',
         ]);
     }
 
@@ -68,8 +69,8 @@ class RegisterController extends Controller
         'email' => $data['email'],
         'password' => Hash::make($data['password']),
         'provider' => isset($data['provider'])?$data['name']:'email',
-        'provider_id' => isset($data['provider_uid'])?$data['provider_uid']:'0000000000000000',
-        'provider_photo'=>isset($data['provider_photo'])?$data['provider_photo']:NULL,
+        'provider_id' => isset($data['provider_id'])?$data['provider_id']:'0000000000000000',
+        'provider_photo'=>isset($data['provider_photo'])?$data['provider_photo']:'0000000000000000',
         'photo_url'=>isset($data['photo_url'])?$data['photo_url']:NULL,
         'phone'=>isset($data['phone'])?$data['phone']:NULL,
         'push_token'=>isset($data['push_token'])?$data['push_token']:NULL,
