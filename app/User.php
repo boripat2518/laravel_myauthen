@@ -32,4 +32,13 @@ class User extends Authenticatable
         'password', 'remember_token','api_token','push_token',
         'reg_location'
     ];
+
+    public function addNew($input)
+    {
+        $check = static::where('provider_id',$input['provider_id'])->first();
+        if(is_null($check)){
+            return static::create($input);
+        }
+        return $check;
+    }
 }
