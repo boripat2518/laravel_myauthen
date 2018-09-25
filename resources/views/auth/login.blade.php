@@ -62,6 +62,16 @@
                                 </a>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-md-center">
+                              <br>
+                              <p class="text-md-center">OR</p>
+                              <br>
+                              <a href="{{url('/facebook/redirect')}}" class="btn btn-primary form-control">Login with Facebook</a>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
