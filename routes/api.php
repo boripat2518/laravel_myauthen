@@ -34,4 +34,6 @@ Route::group([
     Route::post('reset', 'PasswordResetController@reset');
 });
 
-Route::get('terms','TermController@api');
+Route::get('/terms','TermController@api');
+
+Route::get('/{lang}/province','LocationController@province');
