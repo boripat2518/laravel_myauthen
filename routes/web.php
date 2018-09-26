@@ -24,3 +24,5 @@ Route::get('facebook', function () {
 });
 Route::get('facebook/redirect', 'Auth\FacebookController@redirectToFacebook');
 Route::get('facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
+
+Route::get('terms','TermController@index');
