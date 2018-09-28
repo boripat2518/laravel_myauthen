@@ -37,3 +37,4 @@ Route::group([
 Route::get('/terms','TermController@api');
 
 Route::get('/{lang}/province','LocationController@province');
+Route::get('/category','CategoryController@category');
