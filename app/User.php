@@ -20,7 +20,7 @@ class User extends Authenticatable
         'name', 'email', 'password',
         'provider','provider_id','provider_photo',
         'photo_url','phone',
-        'reg_location','api_token','push_token'
+        'reg_location','api_token','push_token','location'
     ];
 
     /**

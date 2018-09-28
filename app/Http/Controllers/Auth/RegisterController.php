@@ -51,8 +51,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6',
-            'password_confirmed' => 'required|string|same:password',
+            'password' => 'required|string|min:6|confirmed',
         ]);
     }
 
@@ -75,7 +74,7 @@ class RegisterController extends Controller
         'phone'=>isset($data['phone'])?$data['phone']:NULL,
         'push_token'=>isset($data['push_token'])?$data['push_token']:NULL,
         'reg_location'=>isset($data['reg_location'])?$data['reg_location']:NULL,
-        'reg_location'=>isset($data['reg_location'])?$data['reg_location']:NULL,
+        'location'=>isset($data['location'])?$data['location']:NULL,
       ]);
     }
 }
